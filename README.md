@@ -13,6 +13,7 @@
         - [スクリプト](#スクリプト-1)
     - [NyanGrayscaleUIPack](#nyangrayscaleuipack)
     - [NyanRedstonePack](#nyanredstonepack)
+    - [NyanDiggingPack](#nyandiggingpack)
 
 <!-- /TOC -->
 
@@ -123,3 +124,34 @@ Get-ChildItem *.png -Recurse | ForEach-Object {
 ![Observer and Sticky Piston](https://user-images.githubusercontent.com/31783332/60409776-ee63e280-9bff-11e9-8842-9ec6209e5d00.png)
 
 このリソパはほんと難しかった。ディレクトリ名の誤字に気付くのが...。  
+
+## NyanDiggingPack
+
+整地の時、ブロック破壊時のパーティクルが極めて視覚的・映像的に邪魔だったので、消しました。  
+US版Google等でresourcepack particles block break...色々調べましたが解決方法は見当たらず。  
+しかし、[NyanRedstonePack](#nyanredstonepack)に使った"ambientocclusion"プロパティについて調べていたら気になることが。  
+
+https://minecraft-ja.gamepedia.com/%E3%83%A2%E3%83%87%E3%83%AB
+
+どうやら、ブロック破壊時のパーティクルの参照先は指定できるようで、適当に本来は存在しない透明な`transparent.png`でも指定してあげれば透過できるんじゃないかと思ーーできました。  
+
+あとは一括処理ですね。  
+整地や大量に破壊しそうなブロックのjsonのみ残して、以下を叩けば`"particle": "block/transparent"`を追加or置き換えしてくれます。  
+
+```powershell
+#カレントディレクトリ
+Set-Location ".\resourcepacks\NyanDiggingPack\assets\minecraft\models\block"
+
+#全てのjsonファイル
+Get-ChildItem *.json | ForEach-Object {
+    $_.Name
+    [PSCustomObject]$Model = Get-Content $_.Name | ConvertFrom-Json -Depth 100
+    $Model."textures" | Add-Member -MemberType NoteProperty -Name "particle" -Value "block/transparent" -Force
+    $Model | ConvertTo-Json -Depth 100 | Out-File $_.Name -Encoding UTF8
+}
+
+#ポシャった時の復活用(例)
+Get-ChildItem *.json | ForEach-Object {
+    Get-Content "C:\Minecraft\GameDir\Default\resourcepacks\1.14.2\assets\minecraft\models\block\$($_.Name)" | Out-File $_.Name -Encoding UTF8
+}
+```
