@@ -151,4 +151,5 @@ Get-ChildItem *.json | ForEach-Object {
 }
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jABanUb0tm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/jABanUb0tm4
+![https://www.youtube.com/embed/jABanUb0tm4](https://i.ytimg.com/vi/jABanUb0tm4/maxresdefault.jpg)
