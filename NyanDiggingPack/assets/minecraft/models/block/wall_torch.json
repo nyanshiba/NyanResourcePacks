@@ -1,0 +1,7 @@
+{
+  "parent": "block/torch_wall",
+  "textures": {
+    "torch": "block/torch",
+    "particle": "block/transparent"
+  }
+}

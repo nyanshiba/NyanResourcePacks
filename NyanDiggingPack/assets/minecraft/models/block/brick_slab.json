@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "block/bricks",
+    "top": "block/bricks",
+    "side": "block/bricks",
+    "particle": "block/transparent"
+  }
+}

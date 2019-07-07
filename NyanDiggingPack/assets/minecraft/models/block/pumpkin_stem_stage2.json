@@ -1,0 +1,7 @@
+{
+  "parent": "block/stem_growth2",
+  "textures": {
+    "stem": "block/pumpkin_stem",
+    "particle": "block/transparent"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "block/acacia_planks",
+    "particle": "block/transparent"
+  }
+}

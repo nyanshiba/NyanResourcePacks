@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_rail_raised_ne",
+  "textures": {
+    "rail": "block/detector_rail_on",
+    "particle": "block/transparent"
+  }
+}

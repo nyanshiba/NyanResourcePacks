@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_fence_gate_open",
+  "textures": {
+    "texture": "block/dark_oak_planks",
+    "particle": "block/transparent"
+  }
+}

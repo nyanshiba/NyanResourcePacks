@@ -1,0 +1,7 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "block/oak_planks",
+    "particle": "block/transparent"
+  }
+}

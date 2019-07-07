@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "block/acacia_planks",
+    "particle": "block/transparent"
+  }
+}

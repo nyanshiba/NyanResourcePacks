@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "block/oxeye_daisy",
+    "particle": "block/transparent"
+  }
+}

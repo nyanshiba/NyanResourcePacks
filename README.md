@@ -1,6 +1,6 @@
 # NyanResourcePacks
 
-<!-- 190701 -->
+<!-- 190707 -->
 
 <!-- TOC -->
 
@@ -136,7 +136,7 @@ https://minecraft-ja.gamepedia.com/%E3%83%A2%E3%83%87%E3%83%AB
 どうやら、ブロック破壊時のパーティクルの参照先は指定できるようで、適当に本来は存在しない透明な`transparent.png`でも指定してあげれば透過できるんじゃないかと思ーーできました。  
 
 あとは一括処理ですね。  
-整地や大量に破壊しそうなブロックのjsonのみ残して、以下を叩けば`"particle": "block/transparent"`を追加or置き換えしてくれます。  
+(1.14.2.jarから抽出するなどした)`\models\block`内のjsonをコピーして以下を叩けば`"particle": "block/transparent"`を追加or置き換えしてくれます。  
 
 ```powershell
 #カレントディレクトリ
@@ -149,9 +149,6 @@ Get-ChildItem *.json | ForEach-Object {
     $Model."textures" | Add-Member -MemberType NoteProperty -Name "particle" -Value "block/transparent" -Force
     $Model | ConvertTo-Json -Depth 100 | Out-File $_.Name -Encoding UTF8
 }
-
-#ポシャった時の復活用(例)
-Get-ChildItem *.json | ForEach-Object {
-    Get-Content "C:\Minecraft\GameDir\Default\resourcepacks\1.14.2\assets\minecraft\models\block\$($_.Name)" | Out-File $_.Name -Encoding UTF8
-}
 ```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jABanUb0tm4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

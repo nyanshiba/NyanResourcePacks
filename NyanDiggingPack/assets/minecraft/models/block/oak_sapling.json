@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "block/oak_sapling",
+    "particle": "block/transparent"
+  }
+}

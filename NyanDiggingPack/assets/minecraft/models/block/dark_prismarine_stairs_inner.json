@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "block/dark_prismarine",
+    "top": "block/dark_prismarine",
+    "side": "block/dark_prismarine",
+    "particle": "block/transparent"
+  }
+}

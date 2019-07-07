@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "block/frosted_ice_3",
+    "particle": "block/transparent"
+  }
+}
