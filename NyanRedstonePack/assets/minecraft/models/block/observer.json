@@ -1,4 +1,5 @@
 {
+    "ambientocclusion": false,
     "parent": "block/block",
     "textures": {
         "bottom": "block/observer_back",

@@ -120,8 +120,16 @@ Get-ChildItem *.png -Recurse | ForEach-Object {
 
 オブザーバー、粘着ピストン、ピストンはどの方向からでも状態が分かる  
 
-![Observer and Sticky Piston](https://user-images.githubusercontent.com/31783332/60409775-ee63e280-9bff-11e9-9db4-6ab380c8ed13.png)
-![Observer and Sticky Piston](https://user-images.githubusercontent.com/31783332/60409776-ee63e280-9bff-11e9-8842-9ec6209e5d00.png)
+<table border="0">
+    <tr>
+        <td><img src="https://user-images.githubusercontent.com/31783332/60409775-ee63e280-9bff-11e9-9db4-6ab380c8ed13.png" alt="Observer and Sticky Piston"/></td>
+        <td><img src="https://user-images.githubusercontent.com/31783332/60409776-ee63e280-9bff-11e9-8842-9ec6209e5d00.png" alt="Observer and Sticky Piston"/></td>
+    </tr>
+</table>
+
+ピストン等を`"ambientocclusion": false`してfpsが気持ち向上する  
+
+![2019-07-31_14 57 13](https://user-images.githubusercontent.com/31783332/62188290-dcb05f00-b3a6-11e9-952c-5c0dc929cec0.png)
 
 このリソパはほんと難しかった。ディレクトリ名の誤字に気付くのが...。  
 
