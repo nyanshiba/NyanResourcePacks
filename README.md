@@ -14,6 +14,7 @@
     - [NyanGrayscaleUIPack](#nyangrayscaleuipack)
     - [NyanRedstonePack](#nyanredstonepack)
     - [NyanDiggingPack](#nyandiggingpack)
+    - [NyanFontPack](#nyanfontpack)
 
 <!-- /TOC -->
 
@@ -129,7 +130,7 @@ Get-ChildItem *.png -Recurse | ForEach-Object {
 
 ピストン等を`"ambientocclusion": false`してfpsが気持ち向上する  
 
-![2019-07-31_14 57 13](https://user-images.githubusercontent.com/31783332/62188290-dcb05f00-b3a6-11e9-952c-5c0dc929cec0.png)
+![NyanRedstonePack](https://user-images.githubusercontent.com/31783332/62188290-dcb05f00-b3a6-11e9-952c-5c0dc929cec0.png)
 
 このリソパはほんと難しかった。ディレクトリ名の誤字に気付くのが...。  
 
@@ -161,3 +162,15 @@ Get-ChildItem *.json | ForEach-Object {
 
 https://www.youtube.com/embed/jABanUb0tm4
 ![https://www.youtube.com/embed/jABanUb0tm4](https://i.ytimg.com/vi/jABanUb0tm4/maxresdefault.jpg)
+
+## NyanFontPack
+
+![NyanFontPack](https://user-images.githubusercontent.com/31783332/82983764-af1a5d80-a02b-11ea-96d4-791a892d27d5.jpg)
+
+通常、Minecraftにカスタムフォントを適用するためには画像形式に変換する必要がありましたが、下記を参考にTrueTypeフォントを使えるようにしました。  
+[How to add a TTF font to your resource pack (1.13-pre7 and 1.13-pre8) : Minecraft](https://www.reddit.com/r/Minecraft/comments/8yjroi/how_to_add_a_ttf_font_to_your_resource_pack/)
+
+OpenTypeフォントには非対応なので、[FontForge](https://fontforge.org/en-US/)を使用してTrueTypeフォントに変換しています。
+
+NyanFontPackでは、Minecraft内できれいに表示できたものとして、[Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP)と[Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP) を使用しています。  
+All Noto fonts are published under the SIL Open Font License, Version 1.1.
