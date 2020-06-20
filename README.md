@@ -7,7 +7,7 @@
 - [NyanResourcePacks](#nyanresourcepacks)
     - [Installation](#installation)
     - [NyanSilentPack](#nyansilentpack)
-        - [下げたレベルの一覧](#下げたレベルの一覧)
+        - [音量を下げた音声ファイルの一覧](#音量を下げた音声ファイルの一覧)
         - [スクリプト](#スクリプト)
     - [NyanTimelapsePack](#nyantimelapsepack)
         - [スクリプト](#スクリプト-1)
@@ -37,7 +37,7 @@
 エンダーマンの音とか、トロッコ(友好的生物🤔)とか、爆発音とかうるさいので小さくしました。  
 静音リソパは他にも幾らかあると思いますが、適切なレベルでなかったり音声が大きく劣化(不適切なエンコード)していたりするので、少し気をつけて処理しました。  
 
-### 下げたレベルの一覧  
+### 音量を下げた音声ファイルの一覧
 これ要らないって時の参考までに。  
 ```
 NyanSilentPack\assets\minecraft\sounds
@@ -174,3 +174,8 @@ OpenTypeフォントには非対応なので、[FontForge](https://fontforge.org
 
 NyanFontPackでは、Minecraft内できれいに表示できたものとして、[Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP)と[Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP) を使用しています。  
 All Noto fonts are published under the SIL Open Font License, Version 1.1.
+
+
+文字の品質が悪い場合、以下を試してみて下さい。
+- Minecraftの解像度を高くする(フルスクリーンなど)
+- 描画品質を改善する(看板にはOptiFineのアンチエイリアス、UIにはFXAAが効きます)
