@@ -1,7 +1,0 @@
-{
-  "parent": "block/crop",
-  "textures": {
-    "crop": "block/wheat_stage4",
-    "particle": "block/transparent"
-  }
-}

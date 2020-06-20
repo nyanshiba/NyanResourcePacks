@@ -1,7 +1,0 @@
-{
-  "parent": "block/turtle_egg",
-  "textures": {
-    "all": "block/turtle_egg_slightly_cracked",
-    "particle": "block/transparent"
-  }
-}

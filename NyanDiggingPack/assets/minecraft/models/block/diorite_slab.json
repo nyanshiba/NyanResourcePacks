@@ -1,9 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "block/diorite",
-    "top": "block/diorite",
-    "side": "block/diorite",
-    "particle": "block/transparent"
-  }
-}

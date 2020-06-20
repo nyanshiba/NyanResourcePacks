@@ -1,7 +1,0 @@
-{
-  "parent": "block/anvil",
-  "textures": {
-    "top": "block/damaged_anvil_top",
-    "particle": "block/transparent"
-  }
-}

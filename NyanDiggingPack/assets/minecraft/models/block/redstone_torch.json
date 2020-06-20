@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_torch",
-  "textures": {
-    "torch": "block/redstone_torch",
-    "particle": "block/transparent"
-  }
-}

@@ -3,8 +3,6 @@
   "textures": {
     "flowerpot": "block/flower_pot",
     "dirt": "block/dirt",
-    "bamboo": "block/bamboo_stalk",
-    "leaf": "block/bamboo_singleleaf",
     "particle": "block/transparent"
   },
   "elements": [
@@ -283,94 +281,89 @@
     },
     {
       "from": [
-        7,
-        0,
-        7
+        2.6,
+        4,
+        8
       ],
       "to": [
-        9,
+        13.4,
         16,
-        9
+        8
       ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": true
+      },
       "faces": {
-        "up": {
-          "uv": [
-            13,
-            0,
-            15,
-            2
-          ],
-          "texture": "#bamboo",
-          "cullface": "up"
-        },
         "north": {
           "uv": [
-            6,
             0,
-            8,
+            0,
+            16,
             16
           ],
-          "texture": "#bamboo"
+          "texture": "#plant",
+          "tintindex": 0
         },
         "south": {
           "uv": [
-            6,
             0,
-            8,
+            0,
+            16,
             16
           ],
-          "texture": "#bamboo"
-        },
-        "west": {
-          "uv": [
-            6,
-            0,
-            8,
-            16
-          ],
-          "texture": "#bamboo"
-        },
-        "east": {
-          "uv": [
-            6,
-            0,
-            8,
-            16
-          ],
-          "texture": "#bamboo"
+          "texture": "#plant",
+          "tintindex": 0
         }
       }
     },
     {
       "from": [
-        0,
-        2,
-        8
+        8,
+        4,
+        2.6
       ],
       "to": [
+        8,
         16,
-        18,
-        8
+        13.4
       ],
-      "shade": false,
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": true
+      },
       "faces": {
-        "north": {
+        "west": {
           "uv": [
             0,
             0,
             16,
             16
           ],
-          "texture": "#leaf"
+          "texture": "#plant",
+          "tintindex": 0
         },
-        "south": {
+        "east": {
           "uv": [
+            0,
+            0,
             16,
-            0,
-            0,
             16
           ],
-          "texture": "#leaf"
+          "texture": "#plant",
+          "tintindex": 0
         }
       }
     }

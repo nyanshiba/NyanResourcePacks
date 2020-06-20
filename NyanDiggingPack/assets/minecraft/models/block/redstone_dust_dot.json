@@ -28,6 +28,16 @@
           ],
           "texture": "#line",
           "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            16,
+            16,
+            0
+          ],
+          "texture": "#line",
+          "tintindex": 0
         }
       }
     },
@@ -50,6 +60,15 @@
             0,
             16,
             16
+          ],
+          "texture": "#overlay"
+        },
+        "down": {
+          "uv": [
+            0,
+            16,
+            16,
+            0
           ],
           "texture": "#overlay"
         }

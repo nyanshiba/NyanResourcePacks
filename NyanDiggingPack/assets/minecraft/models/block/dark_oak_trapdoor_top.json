@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_trapdoor_top",
-  "textures": {
-    "texture": "block/dark_oak_trapdoor",
-    "particle": "block/transparent"
-  }
-}
