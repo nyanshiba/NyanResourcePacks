@@ -136,32 +136,75 @@ Get-ChildItem *.png -Recurse | ForEach-Object {
 
 ## NyanDiggingPack
 
-整地の時、ブロック破壊時のパーティクルが極めて視覚的・映像的に邪魔だったので、消しました。  
-US版Google等でresourcepack particles block break...色々調べましたが解決方法は見当たらず。  
-しかし、[NyanRedstonePack](#nyanredstonepack)に使った"ambientocclusion"プロパティについて調べていたら気になることが。  
-
-https://minecraft-ja.gamepedia.com/%E3%83%A2%E3%83%87%E3%83%AB
-
-どうやら、ブロック破壊時のパーティクルの参照先は指定できるようで、適当に本来は存在しない透明な`transparent.png`でも指定してあげれば透過できるんじゃないかと思ーーできました。  
-
-あとは一括処理ですね。  
-(1.14.2.jarから抽出するなどした)`\models\block`内のjsonをコピーして以下を叩けば`"particle": "block/transparent"`を追加or置き換えしてくれます。  
-
-```powershell
-#カレントディレクトリ
-Set-Location ".\resourcepacks\NyanDiggingPack\assets\minecraft\models\block"
-
-#全てのjsonファイル
-Get-ChildItem *.json | ForEach-Object {
-    $_.Name
-    [PSCustomObject]$Model = Get-Content $_.Name | ConvertFrom-Json -Depth 100
-    $Model."textures" | Add-Member -MemberType NoteProperty -Name "particle" -Value "block/transparent" -Force
-    $Model | ConvertTo-Json -Depth 100 | Out-File $_.Name -Encoding UTF8
-}
-```
+整地の時、ブロック破壊時のパーティクルが極めて視覚的・映像的に邪魔だったので消しました。  
+ブロックパーティクルの参照先に透過されたPNGを指定しているので、見えないパーティクルが出ている状態です。  
+[モデル - Minecraft Wiki](https://minecraft-ja.gamepedia.com/%E3%83%A2%E3%83%87%E3%83%AB)
 
 https://www.youtube.com/embed/jABanUb0tm4
 ![https://www.youtube.com/embed/jABanUb0tm4](https://i.ytimg.com/vi/jABanUb0tm4/maxresdefault.jpg)
+
+下記の手順で一括処理しました。  
+`%APPDATA%\.minecraft\versions\バージョン\バージョン.jar`からJDK同梱のjar.exe等で抽出した`\assets\minecraft\models\block`内で下記のPowerShellスクリプトを実行すると、`"particle": "block/transparent"`を追加or置き換えしてくれます。  
+
+```powershell
+# block particleが透過されたmodelの出力先
+$OutputDir = "$env:USERPROFILE\Desktop\hoge"
+
+# 渡されたmodelのblock particleの透過とファイル出力を行う関数
+function Out-TransparentBlockParticleModel
+{
+    [CmdletBinding()]
+    param (
+        [Parameter()]
+        [string]
+        $Path
+    )
+
+    "transparent: $Path"
+
+    # jsonからmodelを取得
+    $Model = Get-Content $Path | ConvertFrom-Json -Depth 100
+
+    # texturesクラスに"particle": "block/transparent"を追加
+    $Model.textures | Add-Member -MemberType NoteProperty -Name "particle" -Value "block/transparent" -Force
+
+    # 改変されたmodelをjson出力
+    $Model | ConvertTo-Json -Depth 100 | Out-File "$OutputDir\$Path" -Encoding UTF8
+}
+
+# カレントディレクトリ下の全てのjsonファイルを取得してそれぞれ実行
+# Set-Location 1.16-rc1\assets\minecraft\models\block
+foreach ($json in (Get-ChildItem *.json))
+{
+    # jsonからmodelを取得、modelが参照するparentのみ格納
+    $ParentModel = (Get-Content $json.Name | ConvertFrom-Json -Depth 100).parent
+
+    if ($ParentModel -match "minecraft:" -And $ParentModel -ne "minecraft:block/cube")
+    {
+        # parent modelを参照しているmodelは、parent model側でblock particleを透過すれば良いので、parent modelのパスだけ記録しここでは何もしない
+        "ignore:$($json.Name), parent: $ParentModel"
+        [string[]]$Parents += $ParentModel
+    }
+    else
+    {
+        # parent modelを参照していない独立したmodelか、接頭辞minecraft:がないparent modelを参照している特殊なブロックは、model毎にblock particleを透過させる必要がある
+        Out-TransparentBlockParticleModel -Path $json.Name
+    }
+}
+
+# parent modelも同様に処理する
+foreach ($parentModelJsonPath in ($Parents | Sort-Object | Get-Unique))
+{
+    Out-TransparentBlockParticleModel -Path "$($parentModelJsonPath.Replace('minecraft:block/','')).json"
+}
+
+# rsyncでリポジトリに反映させる
+# $WslOutputDir = [Regex]::Replace($OutputDir, "^([A-Z]):(\\.*)?", { "/mnt/" + $args.Groups[1].Value.ToLower() + $args.Groups[2].Value.Replace('\','/')})
+# Start-Process -FilePath wsl -ArgumentList "rsync -av --delete --checksum $WslOutputDir/ /mnt/c/Minecraft/NyanResourcePacks/NyanDiggingPack/assets/minecraft/models/block/" -Wait -NoNewWindow
+```
+
+このほか、`water.json` `lava.json`はブロックパーティクルを透過すると透明になってしまうので削除し、  
+1.15で追加された`beehive.json` `beehive_honey.json` `bee_nest.json` `bee_nest_honey.json`は同様のブロックと異なった挙動を示すため、手動で書き換えています（workaround）。
 
 ## NyanFontPack
 
