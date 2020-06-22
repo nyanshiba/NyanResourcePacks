@@ -14,6 +14,7 @@
     - [NyanGrayscaleUIPack](#nyangrayscaleuipack)
     - [NyanRedstonePack](#nyanredstonepack)
     - [NyanDiggingPack](#nyandiggingpack)
+        - [スクリプト](#スクリプト-2)
     - [NyanFontPack](#nyanfontpack)
 
 <!-- /TOC -->
@@ -142,6 +143,8 @@ Get-ChildItem *.png -Recurse | ForEach-Object {
 
 https://www.youtube.com/embed/jABanUb0tm4
 ![https://www.youtube.com/embed/jABanUb0tm4](https://i.ytimg.com/vi/jABanUb0tm4/maxresdefault.jpg)
+
+### スクリプト
 
 下記の手順で一括処理しました。  
 `%APPDATA%\.minecraft\versions\バージョン\バージョン.jar`からJDK同梱のjar.exe等で抽出した`\assets\minecraft\models\block`内で下記のPowerShellスクリプトを実行すると、`"particle": "block/transparent"`を追加or置き換えしてくれます。  
