@@ -261,9 +261,9 @@
         "down": {
           "uv": [
             6,
-            12,
+            6,
             10,
-            16
+            10
           ],
           "texture": "#flowerpot",
           "cullface": "down"

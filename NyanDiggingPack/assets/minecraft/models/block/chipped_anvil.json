@@ -1,0 +1,7 @@
+{
+  "parent": "block/anvil",
+  "textures": {
+    "top": "block/chipped_anvil_top",
+    "particle": "block/transparent"
+  }
+}

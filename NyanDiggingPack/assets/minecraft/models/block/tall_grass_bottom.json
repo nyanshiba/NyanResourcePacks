@@ -1,0 +1,7 @@
+{
+  "parent": "block/tinted_cross",
+  "textures": {
+    "cross": "block/tall_grass_bottom",
+    "particle": "block/transparent"
+  }
+}

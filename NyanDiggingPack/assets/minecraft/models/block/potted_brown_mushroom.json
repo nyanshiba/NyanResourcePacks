@@ -1,0 +1,7 @@
+{
+  "parent": "block/flower_pot_cross",
+  "textures": {
+    "plant": "block/brown_mushroom",
+    "particle": "block/transparent"
+  }
+}

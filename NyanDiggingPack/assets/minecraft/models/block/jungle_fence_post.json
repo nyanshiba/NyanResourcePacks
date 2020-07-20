@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "block/jungle_planks",
+    "particle": "block/transparent"
+  }
+}

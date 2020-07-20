@@ -1,0 +1,10 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "block/loom_top",
+    "bottom": "block/loom_bottom",
+    "front": "block/loom_front",
+    "side": "block/loom_side",
+    "particle": "block/transparent"
+  }
+}

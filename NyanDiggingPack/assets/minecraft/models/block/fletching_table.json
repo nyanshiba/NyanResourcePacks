@@ -1,12 +1,12 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "block/cube",
   "textures": {
-    "north": "minecraft:block/fletching_table_front",
-    "south": "minecraft:block/fletching_table_front",
-    "east": "minecraft:block/fletching_table_side",
-    "west": "minecraft:block/fletching_table_side",
-    "up": "minecraft:block/fletching_table_top",
-    "down": "minecraft:block/birch_planks",
+    "down": "block/birch_planks",
+    "up": "block/fletching_table_top",
+    "north": "block/fletching_table_front",
+    "east": "block/fletching_table_side",
+    "south": "block/fletching_table_front",
+    "west": "block/fletching_table_side",
     "particle": "block/transparent"
   }
 }

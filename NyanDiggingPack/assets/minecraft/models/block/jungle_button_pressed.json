@@ -1,0 +1,7 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "block/jungle_planks",
+    "particle": "block/transparent"
+  }
+}

@@ -28,16 +28,6 @@
           ],
           "texture": "#line",
           "tintindex": 0
-        },
-        "north": {
-          "uv": [
-            16,
-            0,
-            0,
-            16
-          ],
-          "texture": "#line",
-          "tintindex": 0
         }
       }
     },
@@ -59,15 +49,6 @@
             0,
             0,
             16,
-            16
-          ],
-          "texture": "#overlay"
-        },
-        "north": {
-          "uv": [
-            16,
-            0,
-            0,
             16
           ],
           "texture": "#overlay"

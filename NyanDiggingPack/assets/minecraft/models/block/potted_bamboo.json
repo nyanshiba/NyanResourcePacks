@@ -263,9 +263,9 @@
         "down": {
           "uv": [
             6,
-            12,
+            6,
             10,
-            16
+            10
           ],
           "texture": "#flowerpot",
           "cullface": "down"
@@ -293,6 +293,16 @@
         9
       ],
       "faces": {
+        "down": {
+          "uv": [
+            13,
+            4,
+            15,
+            6
+          ],
+          "texture": "#bamboo",
+          "cullface": "down"
+        },
         "up": {
           "uv": [
             13,

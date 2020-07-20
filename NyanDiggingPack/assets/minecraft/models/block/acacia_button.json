@@ -1,0 +1,7 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "block/acacia_planks",
+    "particle": "block/transparent"
+  }
+}

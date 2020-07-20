@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "block/sweet_berry_bush_stage0",
+    "particle": "block/transparent"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "block/cornflower",
+    "particle": "block/transparent"
+  }
+}

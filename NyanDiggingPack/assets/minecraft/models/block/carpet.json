@@ -1,8 +1,5 @@
 {
   "parent": "block/thin_block",
-  "textures": {
-    "particle": "block/transparent"
-  },
   "elements": [
     {
       "from": [

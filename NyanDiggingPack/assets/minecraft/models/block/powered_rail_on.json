@@ -1,0 +1,7 @@
+{
+  "parent": "block/rail_flat",
+  "textures": {
+    "rail": "block/powered_rail_on",
+    "particle": "block/transparent"
+  }
+}

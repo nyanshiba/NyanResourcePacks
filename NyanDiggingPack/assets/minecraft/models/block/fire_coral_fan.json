@@ -1,0 +1,7 @@
+{
+  "parent": "block/coral_fan",
+  "textures": {
+    "fan": "block/fire_coral_fan",
+    "particle": "block/transparent"
+  }
+}

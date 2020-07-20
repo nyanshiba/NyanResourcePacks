@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "block/white_tulip",
+    "particle": "block/transparent"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "block/oak_log",
+    "side": "block/oak_log",
+    "particle": "block/transparent"
+  }
+}

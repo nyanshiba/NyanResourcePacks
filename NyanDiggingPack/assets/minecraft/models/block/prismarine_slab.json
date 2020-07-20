@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "block/prismarine",
+    "top": "block/prismarine",
+    "side": "block/prismarine",
+    "particle": "block/transparent"
+  }
+}

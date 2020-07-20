@@ -1,0 +1,7 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "block/beetroots_stage1",
+    "particle": "block/transparent"
+  }
+}
