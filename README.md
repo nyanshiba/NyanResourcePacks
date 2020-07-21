@@ -1,7 +1,5 @@
 # NyanResourcePacks
 
-<!-- 190707 -->
-
 <!-- TOC -->
 
 - [NyanResourcePacks](#nyanresourcepacks)
@@ -21,17 +19,39 @@
 
 ## Installation
 
-これらのリソースパックはMinecraft Java Edition 1.14以降向けに作られています。  
-リソースパックのバージョンは`4`なので、1.13とも一定の互換性はあります。  
+これらのリソースパックはMinecraft Java Edition 1.15, 1.16向けに作られています。  
+1.13, 1.14とも一定の互換性があります。  
 
-1. Clone or download -> Download ZIPを選択。  
+1. <span class="btn-branch">μ master ▼</span>を選んで<span class="btn-clone">↓ Code ▼</span> -> Download ZIPを選択します。  
+1.15でNyanDiggingPackを使う場合は<span class="btn-branch">μ 1.15 ▼</span>を選択してください。
 
-2. ダウンロードしたzipファイルを解凍。  
+2. ダウンロードしたzipファイルを展開します。  
 
-3. `%AppData%\.minecraft`またはゲームディレクトリ内の`resourcepacks`内に、  
-解凍したリソースパック(NyanSilentPackやNyanRedstonePack等、NyanResourcePacks毎入れても動作しません！)を置きます。  
+3. `%APPDATA%\.minecraft`またはお使いのゲームディレクトリ内の`resourcepacks`内に、  
+解凍したリソースパックを置きます。  
+このとき、`resourcepacks/NyanResourcePacks`ではなく`resourcepacks/NyanRedstonePacks`や`resourcepacks/NyanDiggingPacks`に置くことに注意してください。
 
 4. Minecraft内でリソースパックを選択してください。  
+赤く警告表示されることと、互換性の有無は無関係です(pack.mcmetaを参照)。
+
+<style>
+.btn-branch,
+.btn-clone {
+  margin: 0 8px;
+  padding: 5px 16px;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #2ea44f;
+  border: 1px solid #2b9048;
+}
+.btn-branch {
+  color: #24292e;
+  background-color: #fafbfc;
+  border-color: #d9dadc; 
+}
+</style>
 
 ## NyanSilentPack
 
@@ -39,6 +59,7 @@
 静音リソパは他にも幾らかあると思いますが、適切なレベルでなかったり音声が大きく劣化(不適切なエンコード)していたりするので、少し気をつけて処理しました。  
 
 ### 音量を下げた音声ファイルの一覧
+
 これ要らないって時の参考までに。  
 ```
 NyanSilentPack\assets\minecraft\sounds
