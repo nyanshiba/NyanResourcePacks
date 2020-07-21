@@ -22,8 +22,8 @@
 これらのリソースパックはMinecraft Java Edition 1.15, 1.16向けに作られています。  
 1.13, 1.14とも一定の互換性があります。  
 
-1. <span class="btn-branch">μ master ▼</span>を選んで<span class="btn-clone">↓ Code ▼</span> -> Download ZIPを選択します。  
-1.15でNyanDiggingPackを使う場合は<span class="btn-branch">μ 1.15 ▼</span>を選択してください。
+1. `μ master ▼`を選んで`↓ Code ▼` -> Download ZIPを選択します。  
+1.15でNyanDiggingPackを使う場合は`μ 1.15 ▼`を選択してください。
 
 2. ダウンロードしたzipファイルを展開します。  
 
@@ -33,25 +33,6 @@
 
 4. Minecraft内でリソースパックを選択してください。  
 赤く警告表示されることと、互換性の有無は無関係です(pack.mcmetaを参照)。
-
-<style>
-.btn-branch,
-.btn-clone {
-  margin: 0 8px;
-  padding: 5px 16px;
-  font-size: 12px;
-  line-height: 20px;
-  border-radius: 6px;
-  color: #fff;
-  background-color: #2ea44f;
-  border: 1px solid #2b9048;
-}
-.btn-branch {
-  color: #24292e;
-  background-color: #fafbfc;
-  border-color: #d9dadc; 
-}
-</style>
 
 ## NyanSilentPack
 
