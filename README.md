@@ -218,7 +218,8 @@ foreach ($parentModelJsonPath in ($Parents | Sort-Object | Get-Unique))
 通常、Minecraftにカスタムフォントを適用するためには画像形式に変換する必要がありましたが、下記を参考にTrueTypeフォントを使えるようにしました。  
 [How to add a TTF font to your resource pack (1.13-pre7 and 1.13-pre8) : Minecraft](https://www.reddit.com/r/Minecraft/comments/8yjroi/how_to_add_a_ttf_font_to_your_resource_pack/)
 
-OpenTypeフォントには非対応なので、[FontForge](https://fontforge.org/en-US/)を使用してTrueTypeフォントに変換しています。
+OpenTypeフォントには非対応なので、[FontForge](https://fontforge.org/en-US/)を使用してTrueTypeフォントに変換しています。  
+[fontforgeでotfからttfに変換する - 俺の外付けHDD](https://nyanshiba.com/blog/fontforge-convert-otf-ttf)
 
 NyanFontPackでは、Minecraft内できれいに表示できたものとして、[Noto Sans JP](https://fonts.google.com/specimen/Noto+Sans+JP)と[Noto Serif JP](https://fonts.google.com/specimen/Noto+Serif+JP) を使用しています。  
 All Noto fonts are published under the SIL Open Font License, Version 1.1.
